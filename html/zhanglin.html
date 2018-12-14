@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INPUT</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .box {
+        width: 500px;
+        height: 50px;
+        margin: 30px auto;
+        border: 1px solid blue
+    }
+    
+    .serach {
+        width: 400px;
+        height: 50px;
+        border: 0;
+        float: left;
+        font-size: 18px
+    }
+    
+    #btn {
+        border: 0;
+        width: 99px;
+        height: 50px;
+        float: right;
+        color: red
+    }
+    
+    #tip {
+        border: 5px red solid;
+        width: 250px;
+        height: 50px;
+        display: none;
+        text-align: center;
+        line-height: 50px;
+        color: #000;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto
+    }
+    
+    #bn {
+        width: 20px;
+        height: 20px;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <input class="serach" type="text" placeholder="请输入你的名字">
+        <button id="btn">搜索</button>
+    </div>
+    <div id="tip">
+        您确定删除我吗
+    </div>
+    <div>qytagag a</div>
+    <input type="text" placeholder="qighaga">
+    <button id="bn" type="color"></button>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    var btn = document.getElementById("btn");
+    btn.onclick = function() {
+        $("#tip").css({
+            "display": "block"
+        });
+        $("#tip").fadeOut(1500)
+    }
+</script>
+
+</html>
